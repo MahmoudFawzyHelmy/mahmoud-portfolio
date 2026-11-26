@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { CiMenuFries } from "react-icons/ci";
 import Link from "next/link";
-function MobileNav() {
+// Links for nav
   const links = [
     { name: "home", path: "/" },
     { name: "services", path: "/services" },
@@ -11,6 +11,8 @@ function MobileNav() {
     { name: "work", path: "/work" },
     { name: "contact", path: "/contact" },
   ];
+function MobileNav() {
+
   const pathname = usePathname();
   return (
     <Sheet>

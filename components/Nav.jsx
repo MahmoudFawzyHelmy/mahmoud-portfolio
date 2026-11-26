@@ -1,15 +1,17 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+// links
+const links = [
+  { name: "home", path: "/" },
+  // { name: "services", path: "/services" },
+  { name: "resume", path: "/resume" },
+  { name: "work", path: "/work" },
+  { name: "contact", path: "/contact" },
+];
 export default function Nav() {
   const pathName = usePathname();
-  const links = [
-    { name: "home", path: "/" },
-    { name: "services", path: "/services" },
-    { name: "resume", path: "/resume" },
-    { name: "work", path: "/work" },
-    { name: "contact", path: "/contact" },
-  ];
+
   return (
     <nav className="main-nav flex items-center gap-8">
       {links.map((link, index) => {
