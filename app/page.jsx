@@ -7,7 +7,7 @@ export default function Home() {
     <section className="home-section relative h-full overflow-hidden">
       <div className="container mx-auto h-full">
         <div className="flex min-h-[calc(100vh-150px)] flex-col justify-center xl:flex-row xl:items-center xl:justify-between">
-          <div className="relative z-10 max-w-[760px] text-center xl:text-left">
+          <div className="relative z-10 max-w-190 text-center xl:text-left">
             <div className="role-pill mx-auto mb-6 w-fit xl:mx-0">
               <span className="status-dot" />
               React Developer
@@ -19,7 +19,7 @@ export default function Home() {
               <span className="name-gradient">Mahmoud Fawzy</span>
             </h1>
 
-            <p className="mx-auto mb-9 max-w-[590px] text-base leading-7 text-white/65 md:text-lg xl:mx-0">
+            <p className="mx-auto mb-9 max-w-147.5 text-base leading-7 text-white/65 md:text-lg xl:mx-0">
               I craft modern, responsive digital experiences with clean code,
               thoughtful interactions, and a sharp eye for detail.
             </p>
@@ -28,7 +28,7 @@ export default function Home() {
               <Button
                 variant="outline"
                 size="lg"
-                className="download-button min-w-[190px]"
+                className="download-button min-w-47.5"
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
@@ -54,7 +54,7 @@ export default function Home() {
               </div>
               <div className="code-lines">
                 <div><b>01</b><span><i>const</i> developer = {"{"}</span></div>
-                <div><b>02</b><span>&nbsp;&nbsp;name: <em>&quot;Mahmoud&quot;</em>,</span></div>
+                <div><b>02</b><span>&nbsp;&nbsp;name: <em>&quot;Mahmoud Fawzy&quot;</em>,</span></div>
                 <div><b>03</b><span>&nbsp;&nbsp;craft: <em>&quot;React apps&quot;</em>,</span></div>
                 <div><b>04</b><span>&nbsp;&nbsp;mindset: <em>&quot;Always growing&quot;</em></span></div>
                 <div><b>05</b><span>{"}"};</span></div>
