@@ -530,6 +530,179 @@ body {
   50% { transform: translateY(-10px); }
 }
 
+.contact-section {
+  position: relative;
+  background:
+    radial-gradient(circle at 18% 50%, rgba(2, 59, 230, 0.09), transparent 24rem);
+}
+
+.contact-form-wrap {
+  min-width: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(28, 28, 34, 0.92), rgba(12, 12, 15, 0.82));
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.24);
+  padding: 34px;
+}
+
+.contact-heading {
+  margin-bottom: 2px;
+}
+
+.contact-heading > span,
+.contact-aside-heading span {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-heading h1 {
+  margin-top: 8px;
+  color: white;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.contact-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.contact-field > input,
+.contact-field > textarea,
+.contact-select {
+  width: 100% !important;
+  height: 48px !important;
+  border-color: rgba(255, 255, 255, 0.09) !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.035) !important;
+  color: white !important;
+  font-size: 14px;
+  transition: 220ms ease;
+}
+
+.contact-field > input::placeholder,
+.contact-field > textarea::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.contact-field > input:focus,
+.contact-field > textarea:focus,
+.contact-select:focus-visible {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(2, 59, 230, 0.12) !important;
+}
+
+.contact-select {
+  justify-content: space-between;
+  padding-inline: 12px;
+}
+
+.contact-message {
+  min-height: 120px !important;
+  resize: vertical;
+}
+
+.contact-submit {
+  width: fit-content;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.contact-submit svg {
+  width: 17px;
+  height: 17px;
+}
+
+.contact-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 0;
+}
+
+.contact-aside-heading {
+  margin-bottom: 18px;
+  padding: 0 4px;
+}
+
+.contact-aside-heading p {
+  max-width: 360px;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.48);
+  line-height: 1.65;
+}
+
+.contact-info-list {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-info-card {
+  display: flex;
+  min-height: 88px;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.025);
+  padding: 16px;
+  text-decoration: none;
+  transition: 220ms ease;
+}
+
+.contact-info-card:hover {
+  border-color: rgba(2, 59, 230, 0.58);
+  background: rgba(2, 59, 230, 0.055);
+  transform: translateX(4px);
+}
+
+.contact-info-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: rgba(2, 59, 230, 0.11);
+  color: #91aaff;
+  font-size: 18px;
+}
+
+.contact-info-card small,
+.contact-info-card strong {
+  display: block;
+}
+
+.contact-info-card small {
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-info-card strong {
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
 .work-section {
   position: relative;
   background:
@@ -772,7 +945,38 @@ body {
   }
 }
 
+@media (max-width: 1199px) {
+  .contact-section {
+    min-height: calc(100vh - 96px);
+  }
+}
+
 @media (max-width: 639px) {
+  .contact-section {
+    align-items: flex-start;
+  }
+
+  .contact-form {
+    border-radius: 18px;
+    padding: 24px 18px;
+  }
+
+  .contact-heading h1 {
+    font-size: 32px;
+  }
+
+  .contact-submit {
+    width: 100%;
+  }
+
+  .contact-aside {
+    padding-top: 4px;
+  }
+
+  .contact-info-card {
+    min-height: 82px;
+  }
+
   .work-section {
     align-items: flex-start;
   }

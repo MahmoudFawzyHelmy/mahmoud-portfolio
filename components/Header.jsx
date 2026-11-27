@@ -8,7 +8,7 @@ export default function Header() {
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" aria-label="Go to homepage">
           <h1 className="text-3xl font-semibold tracking-tight">
-            Mahmoud<span className="text-accent">.</span>
+            Mahmoud Fawzy<span className="text-accent">.</span>
           </h1>
         </Link>
 
