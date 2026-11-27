@@ -81,18 +81,18 @@ export default function Contact() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="contact-field">
                   <span>First name</span>
-                  <Input name="firstName" placeholder="John" required />
+                  <Input name="firstName" placeholder="Mahmoud" required />
                 </label>
                 <label className="contact-field">
                   <span>Last name</span>
-                  <Input name="lastName" placeholder="Doe" required />
+                  <Input name="lastName" placeholder="Fawzy" required />
                 </label>
                 <label className="contact-field">
                   <span>Email address</span>
                   <Input
                     name="email"
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder="mahmoudfawzy@gmail.com"
                     required
                   />
                 </label>
