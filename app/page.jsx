@@ -29,7 +29,7 @@ export default function Home() {
                 variant="outline"
                 size="lg"
                 className="download-button min-w-47.5"
-                render={<a href="/MahmoudFawzyCv.pdf" download />}
+                render={<a href="/MahmouDFawzyCv.pdf" download />}
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
