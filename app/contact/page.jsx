@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -36,6 +37,29 @@ const info = [
 ];
 
 export default function Contact() {
+  const [service, setService] = useState("");
+  const [isOpeningEmail, setIsOpeningEmail] = useState(false);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const firstName = formData.get("firstName")?.trim();
+    const lastName = formData.get("lastName")?.trim();
+    const email = formData.get("email")?.trim();
+    const phone = formData.get("phone")?.trim();
+    const message = formData.get("message")?.trim();
+    const subject = encodeURIComponent(
+      `Portfolio enquiry - ${service || "General"}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone || "Not provided"}\nService: ${service || "General"}\n\nMessage:\n${message}`
+    );
+
+    setIsOpeningEmail(true);
+    window.location.href = `mailto:mahmoudfawzy.helmy@gmail.com?subject=${subject}&body=${body}`;
+  }
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -48,7 +72,7 @@ export default function Contact() {
       <div className="container mx-auto">
         <div className="contact-grid grid gap-8 xl:grid-cols-[minmax(0,1.25fr)_minmax(300px,.75fr)] xl:gap-10">
           <div className="contact-form-wrap">
-            <form action="" className="contact-form">
+            <form onSubmit={handleSubmit} className="contact-form">
               <div className="contact-heading">
                 <span>Contact</span>
                 <h1>Send a Message</h1>
@@ -57,11 +81,11 @@ export default function Contact() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="contact-field">
                   <span>First name</span>
-                  <Input name="firstName" placeholder="John" />
+                  <Input name="firstName" placeholder="John" required />
                 </label>
                 <label className="contact-field">
                   <span>Last name</span>
-                  <Input name="lastName" placeholder="Doe" />
+                  <Input name="lastName" placeholder="Doe" required />
                 </label>
                 <label className="contact-field">
                   <span>Email address</span>
@@ -69,6 +93,7 @@ export default function Contact() {
                     name="email"
                     type="email"
                     placeholder="john@example.com"
+                    required
                   />
                 </label>
                 <label className="contact-field">
@@ -79,7 +104,7 @@ export default function Contact() {
 
               <label className="contact-field">
                 <span>Service</span>
-                <Select>
+                <Select value={service} onValueChange={setService}>
                   <SelectTrigger className="contact-select">
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
@@ -98,11 +123,17 @@ export default function Contact() {
                   name="message"
                   className="contact-message"
                   placeholder="Tell me about your project..."
+                  required
                 />
               </label>
 
-              <Button type="submit" size="lg" className="contact-submit">
-                Send message
+              <Button
+                type="submit"
+                size="lg"
+                className="contact-submit"
+                disabled={isOpeningEmail}
+              >
+                {isOpeningEmail ? "Opening email..." : "Send message"}
                 <LuSend />
               </Button>
             </form>
