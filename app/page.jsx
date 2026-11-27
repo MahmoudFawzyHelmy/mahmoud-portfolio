@@ -29,6 +29,7 @@ export default function Home() {
                 variant="outline"
                 size="lg"
                 className="download-button min-w-47.5"
+                render={<a href="/MahmoudCV.pdf" download />}
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
@@ -36,9 +37,7 @@ export default function Home() {
               <div>
                 <Socials
                   containerStyles={"flex gap-3"}
-                  iconStyles={
-                    "social-button"
-                  }
+                  iconStyles={"social-button"}
                 />
               </div>
             </div>
@@ -53,20 +52,49 @@ export default function Home() {
                 <span />
               </div>
               <div className="code-lines">
-                <div><b>01</b><span><i>const</i> developer = {"{"}</span></div>
-                <div><b>02</b><span>&nbsp;&nbsp;name: <em>&quot;Mahmoud Fawzy&quot;</em>,</span></div>
-                <div><b>03</b><span>&nbsp;&nbsp;craft: <em>&quot;React apps&quot;</em>,</span></div>
-                <div><b>04</b><span>&nbsp;&nbsp;mindset: <em>&quot;Always growing&quot;</em></span></div>
-                <div><b>05</b><span>{"}"};</span></div>
+                <div>
+                  <b>01</b>
+                  <span>
+                    <i>const</i> developer = {"{"}
+                  </span>
+                </div>
+                <div>
+                  <b>02</b>
+                  <span>
+                    &nbsp;&nbsp;name: <em>&quot;Mahmoud Fawzy&quot;</em>,
+                  </span>
+                </div>
+                <div>
+                  <b>03</b>
+                  <span>
+                    &nbsp;&nbsp;craft: <em>&quot;React apps&quot;</em>,
+                  </span>
+                </div>
+                <div>
+                  <b>04</b>
+                  <span>
+                    &nbsp;&nbsp;mindset: <em>&quot;Always growing&quot;</em>
+                  </span>
+                </div>
+                <div>
+                  <b>05</b>
+                  <span>{"}"};</span>
+                </div>
               </div>
             </div>
             <div className="floating-card floating-card-react">
               <span className="react-symbol">⚛</span>
-              <div><strong>React</strong><small>Frontend</small></div>
+              <div>
+                <strong>React</strong>
+                <small>Frontend</small>
+              </div>
             </div>
             <div className="floating-card floating-card-code">
               <span className="code-symbol">&lt;/&gt;</span>
-              <div><strong>Clean code</strong><small>Built to scale</small></div>
+              <div>
+                <strong>Clean code</strong>
+                <small>Built to scale</small>
+              </div>
             </div>
           </div>
         </div>
