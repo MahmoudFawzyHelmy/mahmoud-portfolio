@@ -29,7 +29,13 @@ export default function Home() {
                 variant="outline"
                 size="lg"
                 className="download-button min-w-47.5"
-                render={<a href="/MahmoudFawzyCv.pdf" download />}
+                render={
+                  <a
+                    href="https://drive.google.com/file/d/1OTJQkCj-dU562n1U-q50-BJR__jfVrAw/view?usp=drive_link"
+                    target="_blank"
+                    download
+                  />
+                }
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
